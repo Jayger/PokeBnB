@@ -12,51 +12,71 @@ Home.destroy_all
 cities = [
     {
         name: "Pallet Town", 
+        population: 10,
+        description: "A fairly new and quiet town. It's a small and pretty place. It is the home town of Pokemon League Champion Trainer Red and Famed Trainer Blue.",
         region: "Kanto", 
         img_url: "http://localhost:3000/PalletTown.png"
     },
     {
         name: "Lavender Town", 
+        population: 41,
+        description: "A small town covered in a beautful hue of purple. It is known mainly for ghost sightings in the Pokemon Tower and as the mian gravesite of Pokemon.",
         region: "Kanto", 
         img_url: "http://localhost:3000/LavenderTown.png"
     },
     {
         name: "Viridian City" , 
+        population: 30,
+        description: "A beautiful city that is enveloped in green year-round. It's located in Western Kanto, and is home to the Gym Leader Giovanni. Who just so happens to be missing.",
         region: "Kanto", 
         img_url: "http://localhost:3000/ViridianCity.png"
     },
     {
         name: "Pewter City" , 
+        population: 33,
+        description: "A quiet city nestled between rugged mountains and rocks. It is located in Northwest Kanto. It's most notable resident is Brock, the Pewter City Gym Leader.",
         region: "Kanto", 
         img_url: "http://localhost:3000/PewterCity.png"
     },
     {
-        name: "Cerulean City" , 
+        name: "Cerulean City" ,
+        population: 32,
+        description: "A beautiful city with flowing water and blooming flowers. It is located in Northern Kanto, home the Cerulean City Gym Leader Misty.", 
         region: "Kanto", 
         img_url: "http://localhost:3000/CeruleanCity.png"
     },
     {
-        name: "Vermillion City" , 
+        name: "Vermillion City" ,
+        population: 29,
+        description: "A southern city that is bathed in orange by the setting sun. Vermillion City is home to the 'Lightning American' Lt.Surge, the leader of the electric-specialist Gym.", 
         region: "Kanto", 
         img_url: "http://localhost:3000/VermillionCity.png"
     },
     {
         name: "Celadon City" , 
+        population: 82,
+        description: "A rich, rainbow colored city where people and Pokemon gather. It is located in central Kanto. It is the most populous city in Kanto and the eigth most populous in the Pokemon World, surpassing even Saffron City. Celadon is home to Erika, the city's Gym Leader.",
         region: "Kanto", 
         img_url: "http://localhost:3000/CeladonCity.png"
     },
     {
         name: "Fuchsia City" , 
+        population: 35,
+        description: "A historic village that has become new. It's located in Southwest Kanto. It's most distinguishing features are the Safari Zone and the Poison-type Gym. Koga is the Fuchsia City Gym Leader.",
         region: "Kanto", 
         img_url: "http://localhost:3000/FuchsiaCity.png"
     },
     {
-        name: "Saffron City" , 
+        name: "Saffron City" ,
+        population: 63,
+        description: "The biggest city in Kanto, shining with a golden light. It's a sprawling metropolis in the Kanto region. It lies in between Celadon City, Vermillion City, Lavender Town, and Cerulean City. It is home to Sabrina, the city's Gym Leader.", 
         region: "Kanto", 
         img_url: "http://localhost:3000/SaffronCity.png"
     },
     {
         name: "Cinnabar Island" , 
+        population: 36,
+        description: "A town used to be here until it was swept away by an eruption. It's a large island located off the southern coast of the Kanto Region, south of Pallet Town. It is home to a large volcano. It is home to the fire-type gym leader Blaine.",
         region: "Kanto", 
         img_url: "http://localhost:3000/CinnabarIsland.png"
     }
