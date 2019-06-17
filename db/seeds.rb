@@ -66,7 +66,6 @@ cities = [
 
 
 place_adjectives = [
-    "Beautiful",
     "Stunning",
     "Convenient",
     "Cozy",
@@ -77,18 +76,6 @@ place_adjectives = [
     "Studio",
     "Apartment",
     "Home"
-  ]
-  
-  location_adjectives = [
-    "Lively",
-    "Quiet",
-    "Scenic",
-    "Beautiful"
-  ]
-  
-  locations = [
-    "Neighborhood",
-    "District"
   ]
   
   apartment_images = [
@@ -113,7 +100,7 @@ place_adjectives = [
 
   
     (10..20).to_a.sample.times do
-      name = "#{place_adjectives.sample} #{places.sample} in #{location_adjectives.sample} #{locations.sample}"
+      name = "#{place_adjectives.sample} #{places.sample}"
       address = "#{Faker::Address.street_address}, #{Faker::Address.secondary_address}, #{city.name}"
   
       Home.create(

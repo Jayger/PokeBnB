@@ -12,14 +12,18 @@ class Api::V1::ReservationsController < ApplicationController
 
     def create 
         @reservation = Reservation.create(reservation_params)
-        render json: @reservation
+        if @reservation.valid?
+            render json: @reservation, status: :created
+        else 
+            render json: {errors: 'You have already made a reservation here!'}, status: :not_acceptable
+        end 
     end
      
 
     private
 
     def reservation_params
-        params.require(:reservation).permit(:user_id, :home_id)
+        params.require(:reservation).permit(:name, :address, :price, :user_id, :home_id)
     end
 
 end

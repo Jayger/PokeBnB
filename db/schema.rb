@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 2019_06_05_213124) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.float "price"
     t.integer "user_id"
     t.integer "home_id"
     t.datetime "created_at", null: false
