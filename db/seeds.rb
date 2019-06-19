@@ -86,32 +86,25 @@ cities = [
 
 
 place_adjectives = [
-    "Stunning",
     "Convenient",
     "Cozy",
     "Modern"
   ]
   
   places = [
-    "Studio",
     "Apartment",
     "Home"
   ]
   
   apartment_images = [
-    "https://dynamicmedia.irvinecompany.com/is/image/content/dam/apartments/3-readytopublish/communities/orangecounty/irvine/parkplace/photography/PPIII-INT-MAY2018-LIVRM-A.tif?&wid=766&hei=560&qlt=60&crop=0,0,5202,3798&fit=stretch&iccEmbed=1&icc=AdobeRGB&fmt=pjpeg&pscan=auto",
-    "https://07f138315bb5e97f9e43-31068357019044cca7c8e84d92de0d99.ssl.cf3.rackcdn.com/1024x768/56587_11491_001.jpg",
-    "https://static01.nyt.com/images/2018/08/19/realestate/19underground-slide-AYDY/19underground-slide-AYDY-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-    "https://freshome.com/wp-content/uploads/2018/02/studio-intro.jpg",
-    "https://www.rentcafe.com/blog/wp-content/uploads/2016/04/The-Madison-at-Racine-Apartments-in-Chicago-2.jpg",
-    "https://s-ec.bstatic.com/images/hotel/max1024x768/924/92485933.jpg",
-    "https://www.guestapartment.com/wp-content/uploads/2016/07/1-Paris-Ile-Saint-Louis-Accommodation-Studio-Luxury-View-Balcony-Acacia.jpg",
-    "https://thumb.housinganywhere.com/images/room/1409353/4b306dfc-de7d-11e8-bd9b-42010af00008.jpg?kind=large&rotate=0",
-    "https://cdn.apartmenttherapy.info/image/fetch/q_auto,f_auto,fl_strip_profile,w_620,h_413,c_fill/https://s3.amazonaws.com/pixtruder/original_images/3a2f086a7a89cfc0c5eed06dd12c377454ca308a",
-    "https://www.yourmetropolitan.com/wp-content/uploads/2018/11/west-chester-apartment-Living-room-1.jpg",
-    "https://romeloft.com/rome-apartment-photo/555x380c1q85/23700/2.jpg",
-    "https://freshome.com/wp-content/uploads/2018/07/balcony-how.jpg",
-    "https://eleanorapartments.com/wp-content/uploads/2015/07/studio-apartment-seattle-1.jpg"
+    "https://i.pinimg.com/originals/45/89/a9/4589a97acf69d380b1ad8bd44059e612.jpg",
+    "https://www.wallpapermaiden.com/image/2016/10/03/anime-room-kitchen-inside-the-building-kotatsu-scenic-sunshine-anime-6901.jpg",
+    "http://beergifts.info/wp-content/uploads/2018/12/anime-room-ideas-bedroom-anime-simple-anime-room-google-search-anime-bedroom-ideas-anime-living-room-ideas.jpg",
+    "http://commpaving.com/wp-content/uploads/2018/04/anime-bedroom-anime-bedroom-set-anime-bedroom-bedroom-backgrounds-anime-bedroom-set-anime-bedroom-anime-bedroom-set-anime-anime-bedroom-anime-bedroom-wallpaper.jpg",
+    "https://ksr-ugc.imgix.net/assets/021/715/759/449a1f5d5f773044fe1a0bf433cd7ced_original.png?ixlib=rb-2.0.0&w=680&fit=max&v=1530092455&auto=format&gif-q=50&lossless=true&s=c96917b6254be814efec3dc38e52dd1b",
+    "https://vignette.wikia.nocookie.net/avatarrp/images/6/60/Apt_Room.jpg/revision/latest?cb=20141222004357",
+    "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1387161803i/7542366.jpg",
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/52b8020c-c275-401f-92db-922c8dd9ed67/d7onopn-b168d86e-3ae2-4270-9022-abe5efa13e11.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUyYjgwMjBjLWMyNzUtNDAxZi05MmRiLTkyMmM4ZGQ5ZWQ2N1wvZDdvbm9wbi1iMTY4ZDg2ZS0zYWUyLTQyNzAtOTAyMi1hYmU1ZWZhMTNlMTEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mVzRiyYcnM4sV19Ho3sdETjX8kxYyjVduBBVwQvSTS0",
   ]
   
 
@@ -119,13 +112,13 @@ place_adjectives = [
     city = City.create(city_data)
 
   
-    (10..20).to_a.sample.times do
+    (8..10).to_a.sample.times do
       name = "#{place_adjectives.sample} #{places.sample}"
       address = "#{Faker::Address.street_address}, #{Faker::Address.secondary_address}, #{city.name}"
   
       Home.create(
         name: name,
-        description: Faker::Hipster.paragraph(4),
+        rating: rand(1..5),
         img_url: apartment_images.sample,
         address: address,
         city: city,

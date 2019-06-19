@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_213124) do
 
   create_table "homes", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.integer "rating"
     t.string "address"
     t.string "img_url"
     t.integer "price"
